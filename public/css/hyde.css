@@ -41,7 +41,7 @@ html {
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -176,6 +176,18 @@ a.sidebar-nav-item:focus {
  */
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */
+
+.theme-base-green .sidebar {
+  /*background-color: #4A913C;*/
+  background-color: #006400;
+}
+.theme-base-green .content a,
+.theme-base-green .related-posts li a:hover {
+  /*color: #4A913C;*/
+  color: #006400;
+}
+
+
 
 /* Red */
 .theme-base-08 .sidebar {
