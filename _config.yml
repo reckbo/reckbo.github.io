@@ -3,7 +3,7 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            'reckbo blog'
+title:            'reckbo'
 tagline:          ''
 url:              http://reckbo.github.io/
 paginate:         1
