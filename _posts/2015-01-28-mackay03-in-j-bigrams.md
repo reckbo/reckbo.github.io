@@ -5,7 +5,8 @@ title: Information Theory, Inference, and Learning Algorithms in J - Bigrams
 
 Here's a [J implementation](https://github.com/reckbo/Mackay03) to reproduce
 the probability distributions of the bigrams in the Linux FAQ, as shown in
-[Information Theory, Inference, and Learning Algorithms (Mackay 2003)](http://www.inference.phy.cam.ac.uk/mackay/itila/).
+section 2.1 of 
+[Information Theory, Inference, and Learning Algorithms (Mackay 2003)](http://www.inference.phy.cam.ac.uk/mackay/itila/),
 
 
     NB. Roger Hui's functions for inverted tables
