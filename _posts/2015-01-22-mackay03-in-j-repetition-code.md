@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Information Theory, Inference, and Learning Algorithms in J
+title: Information Theory, Inference, and Learning Algorithms in J - Repetition Code
 ---
 
 Here's a [J implementation](https://github.com/reckbo/Mackay03) of the
