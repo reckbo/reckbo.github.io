@@ -37,27 +37,27 @@ If we define variables *disease* and *test* as
 
 then the probabilities are
 
-* *P(test=1 \| disease=1)* = 95%  
-* *P(test=0 \| disease=0)* = 5%
-* *P(disease=1)* = 1 %
-* *p(disease=0)* = 99 %
+* $P(test=0 \| disease=0) = 5\%$
+* $P(test=1 \| disease=1) = 95\%$
+* $P(disease=0) = 99\%$
+* $P(disease=1) = 1\%$
 
-To start, we represent *P(test|disease)* as a matrix with rows
-representing *disease*  and columns representing  *test*,
+To start, we represent $P(test=j|disease=i) = P_{i,j}$ as a matrix
+`ptest_disease`  where rows represent *disease*  and columns represent  *test*:
 
        NB. Conditional probability P(test|disease)
        ]ptest_disease=: 2 2 $ 0.95 0.05 0.05 0.95
     0.95 0.05
     0.05 0.95
 
-and the marginal probability  *P(disease)*  as a vector
+and the marginal probability  $P(disease=i)$  as a vector
 
         NB. Marginal probability P(disease)
         ]pdisease=: 0.99 0.01 
     0.99 0.01
 
 Then we can compute the joint probability by multiplying the two,
-since *P(test,disease)* = *P(test|disease) P(disease)*
+since $P(test,disease) = P(test|disease) P(disease)$
 
         NB. joint P(test,disease)
         ]joint=: ptest_disease * pdisease 
@@ -66,14 +66,14 @@ since *P(test,disease)* = *P(test|disease) P(disease)*
 
 Now that we have the joint probability, we can calculate any probability that
 we are interested in.  To answer the original question, what is
-*P(disease=1|test=1)*, we divide each column of `joint` by it's sum, because
-*P(disease|test)* =  *P(disease,test)/P(disease)*
+$P(disease=1|test=1)$, we divide each column of `joint` by it's sum, because
+$P(disease|test) =  \frac{P(disease,test)}{P(disease)}$
 
         NB. P(disease|test)
         ]pdisease_test=: (%"1 +/) joint
       0.999469 0.838983
     0.00053135 0.161017
 
-and we see that  *P(disease=1\|test=1)*  is 16%.  So even though the test is
+and we see that  $P(disease=1\|test=1)$  is 16%.  So even though the test is
 95% accurate, because it's a rare disease it's more likely the test is
 giving a false positive than Jo has the disease.
