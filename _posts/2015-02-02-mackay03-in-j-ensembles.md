@@ -6,9 +6,8 @@ title: Information Theory, Inference, and Learning Algorithms in J - Ensembles
 Unlike in the [previous post](/2015/01/28/mackay03-in-j-bigrams/) on 27x27
 letter bigrams where we made a joint probability matrix by counting, ensembles
 are usually defined by a set of conditional and marginal probabilities.  To get
-an intuition for this, let's write out the simple example given in Example 2.3,
-p. 25 in J.  But first, let's give a definition for what an ensemble actually
-is.
+an intuition for this, let's write out the simple example given in Example 2.3
+(p. 25) in J.  But first, here is the definition for an ensemble.
 
 An **ensemble X** is a triple $(x,A_x,P_x)$ where *x* is an outcome taking on
 values from $A_x = \\{a_1, ..., a_I\\}$, with associated probabilities
@@ -21,7 +20,7 @@ and $P(x,y)$ is called the joint probability of *x* and *y*.
 [(Mackay 03)](http://www.inference.phy.cam.ac.uk/mackay/itila/)
 
 
-Now let's get to the example:
+Now for the example:
 
 Jo wakes up not feeling well and the doctor orders a test for a
 disease.  The test is 95% reliable, and 1% of Jo's age and background
@@ -35,7 +34,7 @@ If we define variables *disease* and *test* as
 * *test=0* =\> the test is negative for the disease
 * *test=1* =\> the test is positive for the disease
 
-then the probabilities are
+then the probabilities given are
 
 * $P(test=0 \| disease=0) = 5\%$
 * $P(test=1 \| disease=1) = 95\%$
@@ -43,7 +42,8 @@ then the probabilities are
 * $P(disease=1) = 1\%$
 
 To start, we represent $P(test=j|disease=i) = P_{i,j}$ as a matrix
-`ptest_disease`  where rows represent *disease*  and columns represent  *test*:
+`ptest_disease`  where rows represent *disease*  and columns represent
+*test*:
 
        NB. Conditional probability P(test|disease)
        ]ptest_disease=: 2 2 $ 0.95 0.05 0.05 0.95
@@ -66,7 +66,7 @@ since $P(test,disease) = P(test|disease) P(disease)$
 
 Now that we have the joint probability, we can calculate any probability that
 we are interested in.  To answer the original question, what is
-$P(disease=1|test=1)$, we divide each column of `joint` by it's sum, because
+$P(disease=1|test=1)$, we divide each column of `joint` by it's sum, since
 $P(disease|test) =  \frac{P(disease,test)}{P(disease)}$
 
         NB. P(disease|test)
