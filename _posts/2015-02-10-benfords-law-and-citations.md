@@ -6,8 +6,10 @@ title: Significant Digit (Benford's) Law in Publication Citations
 I expect that any decent sized sample of a convex process will have more numbers
 with a leading significant digit of 1, followed by significant digit 2, and
 the least occurrence of numbers with significant digit 9, since
+
 $f^{-1}(2) - f^{-1}(1) > f^{-1}(3) - f^{-1}(2) > ... > f^{-1}(9) - f^{-1}(8)$
-for a convex function $f(t)$ and uniform distribution of $t$.  To see this in
+
+ for a convex function $f(t)$ and uniform distribution of $t$.  To see this in
 action I thought to plot the histogram of significant digits of publication
 citations, since I think it's reasonable that the more citations a paper has,
 the more likely it is to be cited again.  This meets the convex criterion.  For
@@ -45,7 +47,7 @@ csv files, one per researcher.  Here's the J code I use to plot the histograms:
 
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_J.png)
 
-Here's a version made using R's ggplot:
+Here's a version I made using R's ggplot:
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_R.png)
 
 ([Code on Github](https://github.com/reckbo/citations-and-benfords-law/))
