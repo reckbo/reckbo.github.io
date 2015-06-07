@@ -43,7 +43,7 @@ We want to run this until all positions are visited, i.e. there are no zeroes
 in the first row.
 
         NB. returns true if list y has a zero
-        notallvisited=: -.@:(*./)@:*  
+        notallvisited=: 0&e.
                 
         NB. applies function 'next' until first row has no zeroes 
         run=: next^:(notallvisited@:{.)^:_  
