@@ -74,7 +74,7 @@ The number of steps taken to visit all positions is the sum of the first row.
     24
 
         NB. compute number of steps for 5 simulations
-        +/"1 {. items run items 20# ,: state  
+        +/"1 {. items run items 5# ,: state  
     117 69 106 29 38
 
 Now we're ready to run many simulations and compute the mean number of steps.
