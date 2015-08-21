@@ -47,13 +47,13 @@ csv files, one per researcher.  Here's the J code I use to plot the histograms:
 
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_J.png)
 
-Here's a version I made using R's ggplot:
+And a version made using R's ggplot:
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_R.png)
 
 ([Code on Github](https://github.com/reckbo/citations-and-benfords-law/))
 
-So the results match our intuition, but the next question is, why, except for
-the less senior researcher Sylvain Bouix, do the distributions so closely match
-the log distribution $log(1 + 1/x)$?  Here's one answer given by 
-[Hill 1995](https://projecteuclid.org/euclid.ss/1177009869).
+So the results match our intuition, but the next question is why, except for
+the less senior researcher, do the distributions so closely match
+the log distribution $log(1 + 1/x)$?  [Hill 1995](https://projecteuclid.org/euclid.ss/1177009869) 
+gives one answer.
 
