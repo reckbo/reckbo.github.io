@@ -50,7 +50,7 @@ csv files, one per researcher.  Here's the J code I use to plot the histograms:
 And a version made using R's ggplot:
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_R.png)
 
-([Code on Github](https://github.com/reckbo/citations-and-benfords-law/))
+[Code on Github](https://github.com/reckbo/citations-and-benfords-law/)
 
 So the results match our intuition, but the next question is why, except for
 the less senior researcher, do the distributions so closely match
