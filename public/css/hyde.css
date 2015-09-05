@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  /*font-family: "PT Sans", Helvetica, Arial, sans-serif;*/
 }
 @media (min-width: 48em) {
   html {
@@ -72,14 +72,15 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  /*color: #fff;*/
+  color: #000;
 }
 
 /* About section */
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  /*font-family: "Abril Fatface", serif;*/
   font-size: 3.25rem;
 }
 
@@ -180,11 +181,14 @@ a.sidebar-nav-item:focus {
 .theme-base-green .sidebar {
   /*background-color: #4A913C;*/
   background-color: #006400;
+  /*background-color: #4D7A76;*/
+  background-color: #ffffff;
+  /*color: #000;*/
 }
 .theme-base-green .content a,
 .theme-base-green .related-posts li a:hover {
   /*color: #4A913C;*/
-  color: #006400;
+  /*color: #006400;*/
 }
 
 
