@@ -10,9 +10,9 @@ title: Set Theory and Logic
 >
 >  $$A \bigcup B \rightarrow x \in (A \bigcup B) 
 >  \leftrightarrow x \in A \lor x \in B $$
-
-
-(<http://staffhome.ecm.uwa.edu.au/~00021149/Academy/2011/boolean.pdf>)
+>
+>
+> (<http://staffhome.ecm.uwa.edu.au/~00021149/Academy/2011/boolean.pdf>)
 
 We can represent sets as bit vectors where each bit corresponds to
 an element in a universal set.  Applying to them the
