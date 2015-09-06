@@ -3,6 +3,6 @@ layout: page
 title: About
 ---
 
-Software engineer living in Melbourne, remotely working for the 
+I'm a software engineer living in Melbourne, remotely working for the 
 [Psychiatry Neuromimaging Laboratory](http://pnl.bwh.harvard.edu) 
-in Boston.
+in Boston, and a startup in Canada.
