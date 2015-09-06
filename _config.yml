@@ -6,11 +6,11 @@ relative_permalinks: true
 title:            'reckbo'
 tagline:          'Blog'
 url:              http://reckbo.github.io/
-paginate:         1
+#paginate:         3
 baseurl:          /
 author:
   name:           Ryan Eckbo
-  url:            https://twitter.com/reckbo
+  url:            http://reckbo.com
   #email:          
 pages_list:       
   About: '/about'
