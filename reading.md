@@ -12,3 +12,4 @@ title: Reading
 * J. Machta. **Entropy, Information, and Computation.** 1999.
 * Franklyn Turbak and David Gifford.  **Design Concepts in Programming Languages.** 2008.
 * Bart Jacobs and Jan Rutten. **A Tutorial on (Co)Algebras and (Co)Induction.** 1997.
+* Paolo Aluffi. **Algebra: Chapter 0 (Graduate Studies in Mathematics).** 2009.
