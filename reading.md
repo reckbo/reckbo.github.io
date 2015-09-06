@@ -7,7 +7,7 @@ title: Reading
 * John Hughes. **Why Functional Programming Matters.** 1984. [[pdf]](https://github.com/papers-we-love/papers-we-love/blob/master/functional_programming/why-functional-programming-matters.pdf)
 * Jose Ferreiros. **The Road To Modern Logic—An Interpretation.** 2001.
 * Steve Awodey. **Category Theory.** 2010.  [[pdf]](http://www.mpi-sws.org/~dreyer/courses/catlogic/awodey.pdf)
-* Tom Leinster.  **Rethinking set theory.** 2012. 
+* Tom Leinster.  **Rethinking Set Theory.** 2012. 
 * David J.C. MacKay. **Information Theory, Inference, and Learning Algorithms.** 2003.
 * J. Machta. **Entropy, Information, and Computation.** 1999.
 * Franklyn Turbak and David Gifford.  **Design Concepts in Programming Languages.** 2008.

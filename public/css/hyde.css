@@ -122,14 +122,14 @@ a.sidebar-nav-item:focus {
  * with a 25%-wide `.sidebar`.
  */
 
-.content {
+/*.content {
   padding-top:    4rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 42rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
@@ -141,6 +141,7 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
+*/
 
 
 /*
@@ -148,7 +149,7 @@ a.sidebar-nav-item:focus {
  *
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
-
+/*
 @media (min-width: 48em) {
   .layout-reverse .sidebar {
     left: auto;
@@ -166,6 +167,7 @@ a.sidebar-nav-item:focus {
     margin-right: 22rem;
   }
 }
+*/
 
 
 

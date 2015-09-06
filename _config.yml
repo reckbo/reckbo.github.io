@@ -4,7 +4,7 @@ relative_permalinks: true
 
 # Setup
 title:            'reckbo'
-tagline:          'blog'
+tagline:          'Blog'
 url:              http://reckbo.github.io/
 paginate:         1
 baseurl:          /
@@ -12,3 +12,10 @@ author:
   name:           Ryan Eckbo
   url:            https://twitter.com/reckbo
   #email:          
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Reading: '/reading'
+  Github: 'http://github.com/reckbo'
+  Bitbucket: 'http://bitbucket.org/reckbo'
+  '@reckbo': 'http://twitter.com/reckbo' 
