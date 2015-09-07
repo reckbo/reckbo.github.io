@@ -13,6 +13,7 @@ author:
   url:            http://reckbo.com
   #email:          
 pages_list:       
+  Home: '/'
   About: '/about'
   Archive: '/archive'
   Reading: '/reading'
