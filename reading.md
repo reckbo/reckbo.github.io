@@ -13,3 +13,5 @@ title: Reading
 * J. Machta. **Entropy, Information, and Computation.** 1999.
 * Franklyn Turbak and David Gifford.  **Design Concepts in Programming Languages.** 2008.
 * Bart Jacobs and Jan Rutten. **A Tutorial on (Co)Algebras and (Co)Induction.** 1997.
+* Charles Wells. **Communicating Mathematics: Useful Ideas From Computer Science.** 1995. [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
+* Michael Barr and Charles Wells. **Category Theory for Computer Scientists.** 1998.
