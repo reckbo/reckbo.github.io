@@ -49,6 +49,6 @@ a^b &= e^{cb} \\
 \end{align}
 $$
 
-The last step follows from the proper formulation of $e$ above.  Thus, a base
+The last step follows from the real formulation of $e$ above.  Thus, a base
 $a$ number grows at a rate $c$ ($= \ln a$) times $e$'s unit growth rate.
 
