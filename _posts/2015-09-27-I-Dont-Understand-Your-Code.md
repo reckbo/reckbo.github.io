@@ -3,9 +3,9 @@ layout: post
 title: I Don't Understand Your Code
 ---
 
-Moseley and Marks (2006) claim that the biggest source of software complexity
+Moseley and Marks (2006) claim the biggest source of software complexity
 is state.  To understand a piece of code a programmer must mentally simulate
-its execution, and this requires that she consider the possible runtime states
+its execution, which requires that she consider the possible runtime states
 that influence each step.  The more possible states there are, the more
 scenarios she must consider, and the more uncertain she is of what actually
 happens.  For example, multiplication of two constant numbers is obvious but

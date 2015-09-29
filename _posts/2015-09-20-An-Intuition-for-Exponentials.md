@@ -3,8 +3,8 @@ layout: post
 title: An Intution for Exponentials
 ---
 
-One way to understand exponentials is to see them as numbers decomposed into
-their "infinite roots".  Look at Bernoulli's original formulation of $e$:
+One way to see exponentials is as numbers decomposed into "infinite roots".
+Look at Bernoulli's original formulation of $e$:
 
 
 $$
@@ -14,7 +14,7 @@ e &= \lim_{n\to \infty} (1 + \frac{1}{n})^n \\
 $$
 
 By abusing notation and using $dx$ to mean the equation's infitesimally small
-number, we can rewrite it as
+number, we can rewrite as
 
 $$
 e = (1 + dx)^{1/dx} ,
