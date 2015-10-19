@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Useful Idea from Computer Science
+title: A Computer Science Perspective Helps
 ---
 
 The distinction between abstractions and concrete representations is not as
