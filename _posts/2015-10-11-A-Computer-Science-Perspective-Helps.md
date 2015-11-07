@@ -12,7 +12,7 @@ really are.  But this trap can be avoided by keeping in mind an object's
 objects (Wells 1995).  This will help distinguish them from their concrete
 representations.
 
-Here are some examples of abstractions and their representations:
+Here are some examples of abstractions and their representations (Tao 2015):
 
 - Math objects are encoded as sets of sets of
 ... sets in Zermelo-Fraenkel set theory (e.g the Kuratowski construction of an ordered pair is $$\{\{a\}, \{a,b\}\}$$).
@@ -27,13 +27,9 @@ coordinates $\phi: V \rightarrow {\bf R}^n$ for some basis of $V$.
 - The abstract number systems $N$, $Z$, $Q$, $R$, $C$ are represented by
 concrete numeral systems, for example the decimal and binary numeral systems.
 
-(Tao 2015)
+<br><i><b>References</b></i>
 
+* Wells, Charles 1995, 'Communicating Mathematics: Useful Ideas From Computer Science' [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
 
-<br>
-*References*
-
-Wells, Charles 1995, 'Communicating Mathematics: Useful Ideas From Computer Science' [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
-
-Tao, Terence 2015, '275A, Notes 0: Foundations of probability theory', 
+* Tao, Terence 2015, '275A, Notes 0: Foundations of probability theory', 
 [https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/](https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/)

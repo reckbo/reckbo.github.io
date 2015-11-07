@@ -75,4 +75,4 @@ of the two boolean algebras.
         b1 intersect under toset b2
     0 0 0 1 0 0 0 0 0
 
-More formally, we say the two algebras are isomorphic.
+Formally, the two algebras are said to be isomorphic.

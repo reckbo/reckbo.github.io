@@ -1,18 +1,57 @@
-<div class="sidebar">
-  <!--<div class="container sidebar-sticky">-->
-  <div class="container">
+<!--<div class="sidebar">-->
+  <!--[><div class="container sidebar-sticky"><]-->
+  <!--<div class="container">-->
 
    
-    <nav class="sidebar-nav">
+    <!--<nav class="sidebar-nav">-->
 
-      <h3>Recent Posts</h3>
-      <p>
-      {% for post in site.posts limit:4 %}
-          <a class="sidebar-nav-item" href="{{ post.url }}">{{ post.title }}</a>
-      {% endfor %}
+      <!--<h3>Recent Posts</h3>-->
+      <!--<p>-->
+      <!--{% for post in site.posts limit:4 %}-->
+          <!--<a class="sidebar-nav-item" href="{{ post.url }}">{{ post.title }}</a>-->
+      <!--{% endfor %}-->
 
-    </nav>
+    <!--</nav>-->
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <!--<p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="col-sm-3 col-sm-offset-1 blog-sidebar">-->
+<div class="col-sm-3 blog-sidebar">
+
+    <div class="sidebar-module sidebar-module-inset">
+        <h3>About</h3>
+        <p> I'm a software engineer living in Melbourne, working remotely for the 
+        <a href="http://pnl.bwh.harvard.edu">Psychiatry Neuroimaging Laboratory</a>
+        in Boston and a startup in Canada.
+        </p>
+    </div>
+
+    <div class="sidebar-module sidebar-module-inset">
+    <h3>Recent Posts</h3>
+    <ol class="list-unstyled">
+        {% for post in site.posts limit:4 %}
+        <li class="sidebar-recent-posts">
+        <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>
+                {{ post.date | date_to_string }}
+            </small>
+        </a>
+        </li>
+        {% endfor %}
+    </ol>
+    <a href="/archive">Archive &raquo;</a>
   </div>
-</div>
+
+  <div class="sidebar-module sidebar-module-inset">
+    <h3>Elsewhere</h3>
+    <ol class="list-unstyled">
+        <li><a href="http://github.com/reckbo ">GitHub</a></li>
+        <li><a href="http://bitbucket.org/reckbo ">BitBucket</a></li>
+      <li><a href="http://twitter.com/reckbo">Twitter</a></li>
+    </ol>
+  </div>
+
+</div><!-- /.blog-sidebar -->

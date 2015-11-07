@@ -17,6 +17,3 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Reading: '/reading'
-  Github: 'http://github.com/reckbo'
-  Bitbucket: 'http://bitbucket.org/reckbo'
-  '@reckbo': 'http://twitter.com/reckbo' 

@@ -23,6 +23,6 @@ debugging.  This doesn't mean we should be avoiding *all* state, but it does
 mean we should be avoiding *unnecessary* state.
 
 
-*References*
+<i><b>References</b></i>
 
-Moseley, B & Marks, P 2006, 'Out of the Tar Pit'. [[pdf]](http://shaffner.us/cs/papers/tarpit.pdf)
+* Moseley, B & Marks, P 2006, 'Out of the Tar Pit'. [[pdf](http://shaffner.us/cs/papers/tarpit.pdf)]
