@@ -124,6 +124,10 @@ h6, .h6 {
   background-color: #f5f5f5;
   border-radius: 4px;
 }
+.sidebar-module h4, h3 {
+    font-weight: bold;
+    font-style: italic;
+   }
 .sidebar-module-inset p:last-child,
 .sidebar-module-inset ul:last-child,
 .sidebar-module-inset ol:last-child {
@@ -175,7 +179,10 @@ h6, .h6 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
+.related h4 {
+    font-weight: bold;
+    font-style: italic;
+}
 
 /*
  * Footer
