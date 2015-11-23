@@ -44,3 +44,8 @@ repetition code in section 1.2 of
 And the result, starting with no encoding, ending with a repetition code of 6:
 
 <img src="https://raw.githubusercontent.com/reckbo/Mackay03/master/cat_decoded.png" height="600" width="300"/>
+
+
+<i><b>References</b></i>
+
+* MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]

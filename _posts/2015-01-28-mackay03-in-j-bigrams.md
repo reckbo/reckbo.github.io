@@ -47,10 +47,17 @@ section 2.1 of
     viewmat 2.5 mat2sq pxy
 
 Joint distribution
+
    ![](https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_prob.png)
 
 P(y|x)
+
    ![](https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_pyx.png)
 
 P(x|y)
+
    ![](https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_pxy.png)
+
+<i><b>References</b></i>
+
+* MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]

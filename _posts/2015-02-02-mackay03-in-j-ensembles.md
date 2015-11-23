@@ -77,3 +77,8 @@ $P(disease|test) =  \frac{P(disease,test)}{P(disease)}$
 and we see that  $P(disease=1\|test=1)$  is 16%.  So even though the test is
 95% accurate, because it's a rare disease it's more likely the test is
 giving a false positive than Jo has the disease.
+
+
+<i><b>References</b></i>
+
+* MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]
