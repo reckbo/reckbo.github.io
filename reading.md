@@ -17,11 +17,13 @@ title: Reading
 **_Books_**
 
 * MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]
-* Aluffi, Paolo 2009, **'Algebra: Chapter 0 (Graduate Studies in Mathematics)'**.
-* Barr, M & Wells, C 1998, **'Category Theory for Computer Scientists'**.
+* Hofstadter, Douglas 1979, **'Gödel, Escher, Bach: An Eternal Golden Braid'**. [[Amazon](http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567)]
 * Turbak, F & Gifford, D 2008,  **'Design Concepts in Programming Languages'**.
+* Aluffi, Paolo 2009, **'Algebra: Chapter 0 (Graduate Studies in Mathematics)'**. [[Amazon](http://www.amazon.com/Algebra-Chapter-Graduate-Studies-Mathematics/dp/0821847813)]
+* Barr, M & Wells, C 1998, **'Category Theory for Computer Scientists'**.
 * Awodey, Steve 2010,  **'Category Theory'**. [[pdf](http://www.mpi-sws.org/~dreyer/courses/catlogic/awodey.pdf)]
+* Rich, Henry 2007, **'J for C Programmers'**. [[pdf](http://code.jsoftware.com/mediawiki/images/8/80/JforC20071003.pdf)]
 
-**_Websites_**
+**_Webpages_**
 
 * Meyers, Scott 2000, **'How Non-Member Functions Improve Encapsulation'**. [[link](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)]
