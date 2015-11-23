@@ -12,6 +12,7 @@ title: Reading
 * Machta, J. 1999, **'Entropy, Information, and Computation'**.
 * Jacobs, B & Rutten, J 1997, **'A Tutorial on (Co)Algebras and (Co)Induction'**.
 * Wells, Charles 1995,  **'Communicating Mathematics: Useful Ideas From Computer Science'**. [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
+* Hill, Theodore 1995,  **'A Statistical Derivation of the Significant-Digit Law'**. [[pdf](https://projecteuclid.org/euclid.ss/1177009869)]
 
 **_Books_**
 

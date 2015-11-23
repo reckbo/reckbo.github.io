@@ -14,7 +14,7 @@ action I thought to plot the histogram of significant digits of publication
 citations, since I think it's reasonable that the more citations a paper has,
 the more likely it is to be cited again.  This meets the convex criterion.  For
 a roughly uniform sampling of $t$, we should collect the citations of papers
-of senior researchers only (although I make one exception out of curiosity).
+of senior researchers (although I make one exception out of curiosity).
 
 To get the data, I used the [Publish or Perish](http://www.harzing.com/pop.htm)
 application, a Windows interface to Google Scholar, and downloaded six
@@ -52,8 +52,11 @@ And a version made using R's ggplot:
 
 [Code on Github](https://github.com/reckbo/citations-and-benfords-law/)
 
-So the results match our intuition, but the next question is why, except for
-the less senior researcher, do the distributions so closely match
+So the results match our intuition, but the next question is why (except for
+the less senior researcher) do the distributions so closely match
 the log distribution $log(1 + 1/x)$?  [Hill 1995](https://projecteuclid.org/euclid.ss/1177009869) 
 gives one answer.
 
+<i><b>References</b></i>
+
+* Hill, Theodore 1995,  'A Statistical Derivation of the Significant-Digit Law'. [[pdf](https://projecteuclid.org/euclid.ss/1177009869)]

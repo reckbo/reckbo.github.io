@@ -22,6 +22,10 @@ h6, .h6 {
   color: #333;
 }
 
+img {
+    width: 100%;
+}
+
 
 /*
  * Override Bootstrap's default container.
