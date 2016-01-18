@@ -11,7 +11,7 @@ $$A  \cup B := \{ x: x \in A \text{  or  } x \in B\}.$$
 Typically sets are represented as lists of unique elements, e.g. {1,2,3},
 which together with the set operations define an algebra of lists.  But sets
 can also be represented as bit vectors (indicator functions) where each bit
-corresponds to an element of a universal set.  Set operations can then carried
+corresponds to an element of a universal set.  Set operations are then carried
 out by the logic operators $\land$, $\lor$, and $\lnot$.  Here is an example
 in J.
 
