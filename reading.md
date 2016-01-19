@@ -13,6 +13,7 @@ title: Reading
 * Jacobs, B & Rutten, J 1997, **'A Tutorial on (Co)Algebras and (Co)Induction'**.
 * Wells, Charles 1995,  **'Communicating Mathematics: Useful Ideas From Computer Science'**. [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
 * Hill, Theodore 1995,  **'A Statistical Derivation of the Significant-Digit Law'**. [[pdf](https://projecteuclid.org/euclid.ss/1177009869)]
+* Mitzenmacher, Mitch 2004, **'A Brief History of Generative Models for Power Law and Lognormal Distributions'**. [[pdf](http://www.eecs.harvard.edu/~michaelm/postscripts/im2004a.pdf)]
 
 **_Books_**
 
@@ -27,3 +28,7 @@ title: Reading
 **_Webpages_**
 
 * Meyers, Scott 2000, **'How Non-Member Functions Improve Encapsulation'**. [[link](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)]
+* Fortmann-Roe, Scott 2012, **'Understanding the Bias-Variance Tradeoff'**. [[link](http://scott.fortmann-roe.com/docs/BiasVariance.html)]
+* Fortmann-Roe, Scott 2012, **'Accurately Measuring Model Prediction Error'**. [[link](http://scott.fortmann-roe.com/docs/MeasuringError.html)]
+* Zyga, Lisa 2016, **'Why Too Much Evidence Can Be a Bad Thing'**. [[link](http://m.phys.org/news/2016-01-evidence-bad.html#)]
+
