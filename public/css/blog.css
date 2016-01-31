@@ -113,7 +113,7 @@ img {
   font-family:  "Times New Roman", Times, serif;
   font-size: 17px;
   line-height: 1.4;
-  border-right: solid 1px #ccc;
+  /*border-right: solid 1px #ccc;*/
   margin-right: 20px;
   padding-right:20px;
 }
@@ -126,7 +126,7 @@ img {
 }
 .sidebar-module-inset {
   padding: 15px;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   border-radius: 4px;
 }
 .sidebar-module h4, h3 {
@@ -164,7 +164,7 @@ img {
 .blog-post {
   /*margin-bottom: 60px;*/
   /*border-right: solid 1px #ccc;*/
-    border-bottom: solid 1px #ccc;
+    /*border-bottom: solid 1px #ccc;*/
     padding-bottom: 20px;
 }
 
