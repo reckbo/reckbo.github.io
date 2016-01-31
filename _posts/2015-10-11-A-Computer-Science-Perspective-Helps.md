@@ -4,13 +4,13 @@ title: A Computer Science Perspective Helps
 ---
 
 The distinction between abstractions and concrete representations is not as
-emphasized in mathematics as it is in computer science, making it easier to
-confuse the two.  This can happen particularly when studying foundations, where
-it's easy view their encodings as the ultimate authority on what mathematical objects
-really are.  But this trap can be avoided by keeping in mind an object's
-*specification*: it's essential properties and how it interacts with other
-objects (Wells 1995).  This will help distinguish them from their concrete
-representations.
+emphasized in mathematics as it is in computer science, thus making it easier
+to confuse the two.  This can happen particularly when studying foundations,
+where it's easy view their encodings as the ultimate authority on what
+mathematical objects really are.  But this trap can be avoided by keeping in
+mind an object's *specification*: it's essential properties and how it
+interacts with other objects (Wells 1995).  This will help distinguish them
+from their concrete representations.
 
 Here are some examples of abstractions and their representations (Tao 2015):
 
