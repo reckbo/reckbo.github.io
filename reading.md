@@ -18,6 +18,7 @@ title: Reading
 **_Books_**
 
 * MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]
+* Hastie, T., Tibshirani, R. & Friedman, J. 2001, **'The Elements of Statistical Learning'** [[pdf](http://web.stanford.edu/~hastie/local.ftp/Springer/OLD/ESLII_print4.pdf)]
 * Hofstadter, Douglas 1979, **'Gödel, Escher, Bach: An Eternal Golden Braid'**. [[Amazon](http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567)]
 * Turbak, F & Gifford, D 2008,  **'Design Concepts in Programming Languages'**.
 * Aluffi, Paolo 2009, **'Algebra: Chapter 0 (Graduate Studies in Mathematics)'**. [[Amazon](http://www.amazon.com/Algebra-Chapter-Graduate-Studies-Mathematics/dp/0821847813)]

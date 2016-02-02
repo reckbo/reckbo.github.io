@@ -4,7 +4,7 @@ title: Representing Sets
 ---
 
 Set operations in material set theories are defined in terms
-of the membership predicate ∈, e.g
+of the membership predicate ∈, e.g.
 
 $$A  \cup B := \{ x: x \in A \text{  or  } x \in B\}.$$
 
