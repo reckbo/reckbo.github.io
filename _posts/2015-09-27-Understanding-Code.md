@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I Don't Understand Your Code
+title: Understanding Code
 ---
 
 Moseley and Marks (2006) claim the biggest source of software complexity
