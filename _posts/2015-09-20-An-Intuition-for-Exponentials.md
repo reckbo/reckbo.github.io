@@ -20,14 +20,8 @@ $$
 e = (1 + dx)^{1/dx} ,
 $$
 
-which is $e$'s decomposition into its infinite root $1+dx$.  With this view, you
-can perceive a real exponent $b$ as meaning a multiplication of $b/dx$ roots,
-
-$$
-e^b = (1 + dx)^{b/dx} ,
-$$
-
-and you can see why the derivative of $e^x$ is $e^x$:
+which is $e$'s decomposition into its infinite root $1+dx$, and it's easy to see why
+the derivative of $e^x$ is $e^x$:
 
 $$
 \begin{align}
@@ -43,12 +37,13 @@ Other (non-negative) numbers can be similiarly decomposed:
 
 $$
 \begin{align}
-a^b &= e^{cb} \\
-    &= (1 + dx)^{cb/dx} \\
-    &= (1 + cdx)^{b/dx} \\
+a &= e^{\ln a} \\
+    &= (1 + dx)^{(\ln a)dx} \\
+    &= (1 + (\ln a) dx)^{1/dx} \\
 \end{align}
 $$
 
-The last step follows from the real formulation of $e$ above.  Thus, a base
-$a$ number grows at a rate $c$ ($= \ln a$) times $e$'s unit growth rate.
+The last step follows from the substitution of $n\ln a$ for $n$ in Bernoulli's
+formula above.  Thus, a base $a$ number grows at a rate $\ln
+a$ times $e$'s unit growth rate.
 

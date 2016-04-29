@@ -81,4 +81,4 @@ giving a false positive than Jo has the disease.
 
 <i><b>References</b></i>
 
-* MacKay, David 2003, **'Information Theory, Inference, and Learning Algorithms'**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]
+* MacKay, David 2003, **Information Theory, Inference, and Learning Algorithms**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]

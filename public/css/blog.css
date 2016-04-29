@@ -10,6 +10,9 @@ body {
   color: rgb(51, 51, 51);
 }
 
+/* try headings as font-family: "AtlasGroteskWeb", "Helvetica Neue", Helvetica, Arial, sans-serif*/
+/*font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+
 h1, .h1,
 h2, .h2,
 h3, .h3,

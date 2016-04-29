@@ -52,10 +52,9 @@ And a version made using R's ggplot:
 
 [Code on Github](https://github.com/reckbo/citations-and-benfords-law/)
 
-So the results match our intuition, but the next question is why (except for
+So the results match intuition, but the next question is why (except for
 the less senior researcher) do the distributions so closely match
-the log distribution $log(1 + 1/x)$?  [Hill 1995](https://projecteuclid.org/euclid.ss/1177009869) 
-gives one answer.
+the log distribution $log(1 + 1/x)$?  Here's one answer by [Hill 1995](https://projecteuclid.org/euclid.ss/1177009869).
 
 <i><b>References</b></i>
 

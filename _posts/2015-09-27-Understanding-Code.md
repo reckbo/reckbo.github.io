@@ -17,10 +17,9 @@ scenarios.  Initially she knows nothing and entropy is at a maximum, but after
 some reasoning she begins to recognize some scenarios as impossible and others
 as more or less likely.  Thus her informal reasoning about the code reduces the
 entropy of her mental model and we say she has gained information.  The cost of
-that information is mental energy (analagous to how lowering a physical
-system's entropy costs heat energy); more state means more time spent
-debugging.  This doesn't mean we should be avoiding *all* state, but it does
-mean we should be avoiding *unnecessary* state.
+that information is mental energy: more state means more time spent
+debugging.  This doesn't mean we should be avoiding all state, but we
+should probably be avoiding unnecessary state.
 
 
 <i><b>References</b></i>
