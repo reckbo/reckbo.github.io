@@ -13,7 +13,7 @@ title: Reading
 * Mitzenmacher, Mitch 2004, **A Brief History of Generative Models for Power Law and Lognormal Distributions** [[pdf](http://wwweecsharvardedu/~michaelm/postscripts/im2004apdf)]
 * Barr, M & Wells, C 1998, **Category Theory for Computer Scientists**
 * Rich, Henry 2007, **J for C Programmers** [[pdf](http://codejsoftwarecom/mediawiki/images/8/80/JforC20071003pdf)]
-* Meyers, Scott 2000, **How Non-Member Functions Improve Encapsulation** [[link](http://wwwdrdobbscom/cpp/how-non-member-functions-improve-encapsu/184401197)]
+* Meyers, Scott 2000, **How Non-Member Functions Improve Encapsulation** [[link](http://www.drdobbscom/cpp/how-non-member-functions-improve-encapsu/184401197)]
 
 **_Math_**
 
