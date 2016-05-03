@@ -24,4 +24,4 @@ should probably be avoiding unnecessary state.
 
 <i><b>References</b></i>
 
-* Moseley, B & Marks, P 2006, 'Out of the Tar Pit'. [[pdf](http://shaffner.us/cs/papers/tarpit.pdf)]
+* Moseley, B & Marks, P 2006, **[Out of the Tar Pit](http://shaffner.us/cs/papers/tarpit.pdf)**

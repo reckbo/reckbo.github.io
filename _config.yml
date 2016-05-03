@@ -16,3 +16,4 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Reading: '/reading'
+highlighter: pygments

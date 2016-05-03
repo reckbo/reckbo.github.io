@@ -20,29 +20,30 @@ To get the data, I used the [Publish or Perish](http://www.harzing.com/pop.htm)
 application, a Windows interface to Google Scholar, and downloaded six
 csv files, one per researcher.  Here's the J code I use to plot the histograms:
 
-    load'csv'
-    load'plot'
+{% highlight J %}
+load'csv plot'
 
-    csvs=: {."1 fdir '*.csv'
+csvs=: {."1 fdir '*.csv'
 
-    NB. helper functions
-    readcitescol=: >@:(".each)@:}.@:({."1)@readcsv
-    firstdigit=: {.@:(10&#.^:_1) "0
-    freq=:#/.~
-    dropzero=:}.
-    normalize=: (% +/)
+NB. helper functions
+readcitescol=: >@:(".each)@:}.@:({."1)@readcsv
+firstdigit=: {.@:(10&#.^:_1) "0
+freq=:#/.~
+dropzero=:}.
+normalize=: (% +/)
 
-    NB. Make histogram for each csv
-    hist=: > dropzero@:normalize@:freq@:sort@:firstdigit@:readcitescol each csvs
+NB. Make histogram for each csv
+hist=: > dropzero@:normalize@:freq@:sort@:firstdigit@:readcitescol each csvs
 
-    NB. Define Benford distribution function
-    benford=: (10&^.)@:(1 + %)
+NB. Define Benford distribution function
+benford=: (10&^.)@:(1 + %)
 
-    NB. Make the plot
-    key=: 'key Benford,', ','joinstring csvs  NB. the legend
-    xlabel=: 'xlabel ', ": >: i.9  NB. labels 1 to 9
-    title=: 'title Benford Distribution for Publication Citations'
-    (';'joinstring key;xlabel;title) plot (benford >:i.9),hist
+NB. Make the plot
+key=: 'key Benford,', ','joinstring csvs  NB. the legend
+xlabel=: 'xlabel ', ": >: i.9  NB. labels 1 to 9
+title=: 'title Benford Distribution for Publication Citations'
+(';'joinstring key;xlabel;title) plot (benford >:i.9),hist
+{% endhighlight %}
 
 
 ![](https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_J.png)
@@ -58,4 +59,4 @@ the log distribution $log(1 + 1/x)$?  Here's one answer by [Hill 1995](https://p
 
 <i><b>References</b></i>
 
-* Hill, Theodore 1995,  'A Statistical Derivation of the Significant-Digit Law'. [[pdf](https://projecteuclid.org/euclid.ss/1177009869)]
+* Hill, Theodore 1995,  **[A Statistical Derivation of the Significant-Digit Law](https://projecteuclid.org/euclid.ss/1177009869)**

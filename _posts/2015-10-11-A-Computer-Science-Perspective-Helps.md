@@ -31,7 +31,6 @@ concrete numeral systems, for example the decimal and binary numeral systems.
 
 <br><i><b>References</b></i>
 
-* Wells, Charles 1995, 'Communicating Mathematics: Useful Ideas From Computer Science' [[pdf](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)]
+* Wells, Charles 1995, **[Communicating Mathematics: Useful Ideas From Computer Science](http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf)**
 
-* Tao, Terence 2015, '275A, Notes 0: Foundations of probability theory', 
-[https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/](https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/)
+* Tao, Terence 2015, **[275A, Notes 0: Foundations of probability theory](https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/)**

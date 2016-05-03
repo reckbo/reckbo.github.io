@@ -45,34 +45,42 @@ To start, we represent $P(test=j|disease=i) = P_{i,j}$ as a matrix
 `ptest_disease`  where rows represent *disease*  and columns represent
 *test*:
 
-       NB. Conditional probability P(test|disease)
-       ]ptest_disease=: 2 2 $ 0.95 0.05 0.05 0.95
-    0.95 0.05
-    0.05 0.95
+{% highlight J %}
+  NB. Conditional probability P(test|disease)
+  ]ptest_disease=: 2 2 $ 0.95 0.05 0.05 0.95
+0.95 0.05
+0.05 0.95
+{% endhighlight %}
 
 and the marginal probability  $P(disease=i)$  as a vector
 
-        NB. Marginal probability P(disease)
-        ]pdisease=: 0.99 0.01 
-    0.99 0.01
+{% highlight J %}
+ NB. Marginal probability P(disease)
+ ]pdisease=: 0.99 0.01 
+0.99 0.01
+{% endhighlight %}
 
 Then we can compute the joint probability by multiplying the two,
 since $P(test,disease) = P(test|disease) P(disease)$
 
-        NB. joint P(test,disease)
-        ]joint=: ptest_disease * pdisease 
-    0.9405 0.0495
-    0.0005 0.0095
+{% highlight J %}
+ NB. joint P(test,disease)
+ ]joint=: ptest_disease * pdisease 
+0.9405 0.0495
+0.0005 0.0095
+{% endhighlight %}
 
 Now that we have the joint probability, we can calculate any probability that
 we are interested in.  To answer the original question, what is
 $P(disease=1|test=1)$, we divide each column of `joint` by it's sum, since
 $P(disease|test) =  \frac{P(disease,test)}{P(disease)}$
 
-        NB. P(disease|test)
-        ]pdisease_test=: (%"1 +/) joint
-      0.999469 0.838983
-    0.00053135 0.161017
+{% highlight J %}
+ NB. P(disease|test)
+ ]pdisease_test=: (%"1 +/) joint
+0.999469 0.838983
+0.00053135 0.161017
+{% endhighlight %}
 
 and we see that  $P(disease=1\|test=1)$  is 16%.  So even though the test is
 95% accurate, because it's a rare disease it's more likely the test is
@@ -81,4 +89,4 @@ giving a false positive than Jo has the disease.
 
 <i><b>References</b></i>
 
-* MacKay, David 2003, **Information Theory, Inference, and Learning Algorithms**. [[pdf](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)]
+* MacKay, David 2003, **[Information Theory, Inference, and Learning Algorithms](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)**
