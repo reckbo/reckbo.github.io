@@ -1,3 +1,5 @@
+#!/usr/bin/env jconsole
+
 formatline=: 3 : 0
   'author year title'=. y
   '* **',title,'**   <br>',author,' ',year
@@ -11,5 +13,5 @@ title: Reading
 )
 
 Body=.LF joinstring ;  ( (a:,2&{.)@{. , <@formatline"1@:}.) each  t=.(<@:(deb each)@:('|'&cut every)@:cutLF;.1~ '_**'&E.) fread'reading.dsv'
-(HDR,Body) fwrite 'reading.md'
-
+(HDR,Body) fwrite '_reading.md'
+exit''

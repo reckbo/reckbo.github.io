@@ -28,6 +28,7 @@ _**Machine Learning, Statistics, Data Science**_
 
 * **[Information Theory, Inference, and Learning Algorithms ](http://wwwinferencephycamacuk/itprnn/bookpdf)**   <br>MacKay, David 2003
 * **[Gaussian Process Basics](http://videolecturesnet/gpip06_mackay_gpb/)**   <br>Mackay, David 2006
+* **[Bayesian Data Analysis, 3rd Edition](http://www.amazon.com/Bayesian-Analysis-Chapman-Statistical-Science-ebook/dp/B00I60M6H6/)**   <br>Gelman, A, Carlin, J. B., Stern, H. S., and Rubin D. B. 2013
 * **[Bayesian Kernel Methods](http://alexsmolaorg/papers/2003/SmoSch03pdf)**   <br>Smola, A & Sch¨olkopf B 2003
 * **[The Elements of Statistical Learning](http://webstanfordedu/~hastie/localftp/Springer/OLD/ESLII_print4pdf)**   <br>Hastie, T, Tibshirani, R & Friedman, J 2001
 * **[Lecture Notes on Bayesian Nonparametrics](http://stat.columbia.edu/~porbanz/papers/porbanz_BNP_draft.pdf)**   <br>Orbanz, Peter 2014
