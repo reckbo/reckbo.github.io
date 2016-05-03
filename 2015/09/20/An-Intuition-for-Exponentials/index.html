@@ -12,7 +12,7 @@
   <meta name="author" content="">
   <title>
     
-      reckbo &middot; Blog
+      An Intution for Exponentials &middot; reckbo
     
   </title>
 
@@ -92,151 +92,133 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
           <div class="row">
               <div class="col-sm-8 blog-main">
     <div class="blog-post">
-        <h2 class="blog-post-title">Home</h2>
-        <p class="blog-post-meta"></p>
-        <div class="related">
-  <h4>Recent Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+        <h2 class="blog-post-title">An Intution for Exponentials</h2>
+        <p class="blog-post-meta">20 Sep 2015</p>
+        <p>One way to see exponentials is as numbers decomposed into “infinite roots”.
+Look at Bernoulli’s original formulation of $e$:</p>
 
-  <p></p>
+<script type="math/tex; mode=display">% <![CDATA[
 
-  <h4>All Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/06/08/Representing-Sets/">
-            Representing Sets
-            <small>
-                08 Jun 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/03/11/random-walk-on-a-clock-in-j/">
-            Random Walk on a Clock in J
-            <small>
-                11 Mar 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/10/benfords-law-and-citations/">
-            Significant Digit (Benford's) Law in Publication Citations
-            <small>
-                10 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/02/mackay03-in-j-ensembles/">
-            Information Theory, Inference, and Learning Algorithms in J - Ensembles
-            <small>
-                02 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/28/mackay03-in-j-bigrams/">
-            Information Theory, Inference, and Learning Algorithms in J - Bigrams
-            <small>
-                28 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/22/mackay03-in-j-repetition-code/">
-            Information Theory, Inference, and Learning Algorithms in J - Repetition Code
-            <small>
-                22 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+\begin{align}
+e &= \lim_{n\to \infty} (1 + \frac{1}{n})^n \\
+\end{align}
+ %]]></script>
 
-</div>
+<p>By abusing notation and using $dx$ to mean the equation’s infitesimally small
+number, we can rewrite as</p>
+
+<script type="math/tex; mode=display">
+e = (1 + dx)^{1/dx} ,
+</script>
+
+<p>which is $e$’s decomposition into its infinite root $1+dx$, and it’s easy to see why
+the derivative of $e^x$ is $e^x$:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+\frac{d}{dx} e^x &= \frac{e^{x + dx} - e^x}{dx} \\
+&= \frac{ e^x e^{dx} - e^x}{dx} \\
+&= \frac{e^x (1 + dx) - e^x}{dx} \\
+&= \frac{e^x dx}{dx} \\
+&= e^x
+\end{align}
+ %]]></script>
+
+<p>Other (non-negative) numbers can be similiarly decomposed:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+a &= e^{\ln a} \\
+    &= (1 + dx)^{(\ln a)dx} \\
+    &= (1 + (\ln a) dx)^{1/dx} \\
+\end{align}
+ %]]></script>
+
+<p>The last step follows from the substitution of $n\ln a$ for $n$ in Bernoulli’s
+formula above.  Thus, a base $a$ number grows at a rate $\ln
+a$ times $e$’s unit growth rate.</p>
 
 
+        </div>
 
+    <div class="related">
+        <h4>Related Posts</h4>
+        <ul class="related-posts">
+            
+            <li>
+            <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
+                HTML Scraping with a Text Browser
+                <small>19 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
+                A Computer Science Perspective Helps
+                <small>11 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/09/27/Understanding-Code/">
+                Understanding Code
+                <small>27 Sep 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/06/08/Representing-Sets/">
+                Representing Sets
+                <small>08 Jun 2015</small>
+            </a>
+            </li>
+            
+        </ul>
+
+        <p></p>
+
+        <!--<h3>Recent Posts</h3>-->
+        <!--<ul class="related-posts">-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">-->
+                <!--HTML Scraping with a Text Browser-->
+                <!--<small>-->
+                    <!--19 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">-->
+                <!--A Computer Science Perspective Helps-->
+                <!--<small>-->
+                    <!--11 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/27/Understanding-Code/">-->
+                <!--Understanding Code-->
+                <!--<small>-->
+                    <!--27 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/20/An-Intuition-for-Exponentials/">-->
+                <!--An Intution for Exponentials-->
+                <!--<small>-->
+                    <!--20 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+        <!--</ul>-->
     </div>
 </div>
 

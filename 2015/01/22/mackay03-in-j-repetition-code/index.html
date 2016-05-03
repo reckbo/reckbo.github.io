@@ -12,7 +12,7 @@
   <meta name="author" content="">
   <title>
     
-      reckbo &middot; Blog
+      Information Theory, Inference, and Learning Algorithms in J - Repetition Code &middot; reckbo
     
   </title>
 
@@ -92,151 +92,130 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
           <div class="row">
               <div class="col-sm-8 blog-main">
     <div class="blog-post">
-        <h2 class="blog-post-title">Home</h2>
-        <p class="blog-post-meta"></p>
-        <div class="related">
-  <h4>Recent Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+        <h2 class="blog-post-title">Information Theory, Inference, and Learning Algorithms in J - Repetition Code</h2>
+        <p class="blog-post-meta">22 Jan 2015</p>
+        <p>Here’s a <a href="https://github.com/reckbo/Mackay03">J implementation</a> of the
+repetition code in section 1.2 of 
+<a href="http://www.inference.phy.cam.ac.uk/mackay/itila/">Information Theory, Inference, and Learning Algorithms (Mackay 2003)</a>.</p>
 
-  <p></p>
+<figure class="highlight"><pre><code class="language-j" data-lang="j"><span></span><span class="nv">require</span><span class="s">&#39;jpeg viewmat&#39;</span>
+<span class="c1">NB. binarize an image</span>
+<span class="nv">binarize</span><span class="o">=:</span> <span class="p">(</span><span class="mf">0.</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="p">(</span><span class="o">%</span> <span class="o">&gt;./^:</span><span class="m">_</span><span class="p">))</span> 
 
-  <h4>All Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/06/08/Representing-Sets/">
-            Representing Sets
-            <small>
-                08 Jun 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/03/11/random-walk-on-a-clock-in-j/">
-            Random Walk on a Clock in J
-            <small>
-                11 Mar 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/10/benfords-law-and-citations/">
-            Significant Digit (Benford's) Law in Publication Citations
-            <small>
-                10 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/02/mackay03-in-j-ensembles/">
-            Information Theory, Inference, and Learning Algorithms in J - Ensembles
-            <small>
-                02 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/28/mackay03-in-j-bigrams/">
-            Information Theory, Inference, and Learning Algorithms in J - Bigrams
-            <small>
-                28 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/22/mackay03-in-j-repetition-code/">
-            Information Theory, Inference, and Learning Algorithms in J - Repetition Code
-            <small>
-                22 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+<span class="c1">NB. binary matrix with shape of y and probability of 1 = x, default 0.10</span>
+<span class="nv">noise</span><span class="o">=:</span> <span class="mf">0.</span><span class="mi">1</span><span class="o">&amp;$:</span> <span class="o">:</span> <span class="o">[</span> <span class="o">&gt;</span> <span class="err">?</span><span class="o">.@:</span><span class="p">(</span><span class="o">$&amp;</span><span class="mi">0</span><span class="p">)</span><span class="o">@:$@:]</span>
 
-</div>
+<span class="c1">NB. a bit is flipped if the corresponding noise vector bit is 1, which is</span>
+<span class="c1">NB. equivalent to add mod 2, or XOR </span>
+<span class="nv">addnoise</span><span class="o">=:</span> <span class="o">~:</span>  
 
+<span class="c1">NB. repetition code - makes x copies of image y (default 3)</span>
+<span class="nv">rep</span><span class="o">=:</span> <span class="mi">3</span><span class="o">&amp;$:</span> <span class="o">:</span> <span class="p">(</span><span class="o">[</span> <span class="o">#</span> <span class="o">,:@]</span><span class="p">)</span>  
 
+<span class="c1">NB. majority vote decoder - returns 0 or 1.  For 3 bits, the function table is:</span>
+<span class="c1">NB. (; vote)&quot;1 #: i.8</span>
+<span class="nv">vote</span><span class="o">=:+/</span> <span class="o">&gt;</span> <span class="o">+/@:-.</span>  
 
+<span class="c1">NB. define the encoder as the repetition code and the majority vote as it&#39;s</span>
+<span class="c1">NB. inverse</span>
+<span class="nv">enc</span><span class="o">=:</span> <span class="nv">rep</span> <span class="o">:.</span> <span class="p">(</span><span class="nv">vote</span><span class="o">@:]</span><span class="p">)</span>
+
+<span class="c1">NB. verb to simulate a transmission of image y with repetition x</span>
+<span class="nv">transmit</span><span class="o">=:</span> <span class="nv">dyad</span> <span class="o">:</span> <span class="s">&#39;(addnoise noise)&amp;.(x&amp;enc) y&#39;</span>  <span class="o">&quot;</span><span class="mi">0</span> <span class="m">_</span>
+
+<span class="c1">NB. Compare results of transmitting an image with repetition codes 1 thru 6</span>
+<span class="nv">img</span><span class="o">=:</span> <span class="nv">readjpeg</span><span class="s">&#39;cat.jpg&#39;</span>
+<span class="nv">result</span><span class="o">=:</span> <span class="o">,/</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="nv">i</span><span class="o">.</span><span class="mi">6</span><span class="p">)</span> <span class="nv">transmit</span> <span class="nv">binarize</span> <span class="nv">img</span>
+<span class="nv">viewmat</span> <span class="nv">result</span></code></pre></figure>
+
+<p>And the result, starting with no encoding, ending with a repetition code of 6:</p>
+
+<p><img src="https://raw.githubusercontent.com/reckbo/Mackay03/master/cat_decoded.png" height="600" width="300" /></p>
+
+<p><i><b>References</b></i></p>
+
+<ul>
+  <li>MacKay, David 2003, <strong><a href="http://www.inference.phy.cam.ac.uk/itprnn/book.pdf">Information Theory, Inference, and Learning Algorithms</a></strong></li>
+</ul>
+
+        </div>
+
+    <div class="related">
+        <h4>Related Posts</h4>
+        <ul class="related-posts">
+            
+            <li>
+            <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
+                HTML Scraping with a Text Browser
+                <small>19 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
+                A Computer Science Perspective Helps
+                <small>11 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/09/27/Understanding-Code/">
+                Understanding Code
+                <small>27 Sep 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/09/20/An-Intuition-for-Exponentials/">
+                An Intution for Exponentials
+                <small>20 Sep 2015</small>
+            </a>
+            </li>
+            
+        </ul>
+
+        <p></p>
+
+        <!--<h3>Recent Posts</h3>-->
+        <!--<ul class="related-posts">-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">-->
+                <!--HTML Scraping with a Text Browser-->
+                <!--<small>-->
+                    <!--19 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">-->
+                <!--A Computer Science Perspective Helps-->
+                <!--<small>-->
+                    <!--11 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/27/Understanding-Code/">-->
+                <!--Understanding Code-->
+                <!--<small>-->
+                    <!--27 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/20/An-Intuition-for-Exponentials/">-->
+                <!--An Intution for Exponentials-->
+                <!--<small>-->
+                    <!--20 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+        <!--</ul>-->
     </div>
 </div>
 

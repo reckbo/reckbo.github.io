@@ -1,0 +1,29 @@
+Try background color fff0e0
+pastel blue 78, 122, 118
+
+Add some rigor to set/bit array post
+let A,B \in P(G)
+A U B <-> \bigcup {A,B} <-> {x \in G | x \in A OR x \in B} 
+I_A : G -> {0,1} 
+I_B : G -> {0,1}
+I_{A U B} -> bit array
+
+(https://en.wikipedia.org/wiki/Set-builder_notation)
+    To illustrate this in terms of our notation, let X = {x | x ∈ A ∧ P(x)} denotes
+    the set of every element of A satisfying the predicate P(x). The canonical
+    restriction on set builder notation asserts that X is a set only if A is
+    already known to be a set. This restriction is codified in the axiom schema of
+    separation present in standard axiomatic set theory
+    
+
+important aspect of defining a set is definition must enable us to determine
+which objects are in the set and which aren't.
+Sets are specified using one of three methods:
+1) explicit listing
+2) set builder notation
+3) characteristic functions
+
+Characteristic function as method of specifying a set
+characteristic function Chi_A  of set A is a mapping from  objects
+into membership indicators. maps object x to 0 if x is not in A,
+and 1 if x is in A.

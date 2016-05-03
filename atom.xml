@@ -1,28 +1,619 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <link href="{{ site.url }}/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <title>reckbo</title>
+ <link href="http://reckbo.github.io//atom.xml" rel="self"/>
+ <link href="http://reckbo.github.io//"/>
+ <updated>2016-05-03T14:46:12+10:00</updated>
+ <id>http://reckbo.github.io/</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Ryan Eckbo</name>
+   <email></email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>HTML Scraping with a Text Browser</title>
+   <link href="http://reckbo.github.io//2015/10/19/HTML-Scraping-with-a-Text-Browser/"/>
+   <updated>2015-10-19T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/10/19/HTML-Scraping-with-a-Text-Browser</id>
+   <content type="html">&lt;p&gt;Sometimes it’s easier to scrape web pages by rendering them to text and
+processing it with a script rather than using parser methods like
+html-xml-utils, Python’s BeautifulSoup, or R’s readHTMLTable.  This can happen
+when the html elements have no distinguishing classes or id’s but the web page
+has clearly delimited tables, like at &lt;a href=&quot;http://afltables.com/afl/afl_index.html&quot;&gt;AFL Tables&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;Here are two ways I rendered some of the &lt;a href=&quot;http://afltables.com/afl/afl_index.html&quot;&gt;AFL Tables&lt;/a&gt; pages to text 
+using the text browsers &lt;em&gt;w3m&lt;/em&gt; and &lt;em&gt;elinks&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;w3m -dump -cols 150 -T text/html webpage.html &amp;gt; webpage.txt
+elinks -dump -dump-width 250 &amp;gt; webpage.txt &amp;lt; webpage.html
+&lt;/code&gt;&lt;/pre&gt;
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>A Computer Science Perspective Helps</title>
+   <link href="http://reckbo.github.io//2015/10/11/A-Computer-Science-Perspective-Helps/"/>
+   <updated>2015-10-11T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/10/11/A-Computer-Science-Perspective-Helps</id>
+   <content type="html">&lt;p&gt;The distinction between abstractions and concrete representations is not as
+emphasized in mathematics as it is in computer science, making it easier to
+conflate the two.  This can happen particularly when studying foundations,
+where it’s very tempting to view their encodings as the ultimate authority on
+what mathematical objects really are.  We can avoid this trap can by keeping in
+mind an object’s specification, i.e. it’s essential properties and how it
+interacts with other objects (Wells 1995).  This helps distinguish them from
+their concrete representations.  &lt;/p&gt;
+
+&lt;p&gt;Here are some examples of mathematical abstractions and their representations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Math objects are encoded as sets of sets of
+… sets in Zermelo-Fraenkel set theory (e.g the Kuratowski construction of an ordered pair is &lt;script type=&quot;math/tex&quot;&gt;\{\{a\}, \{a,b\}\}&lt;/script&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Probabilistic events are modelled by sample spaces.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An abstract vector space $V$ is represented by a concrete system of
+coordinates $\phi: V \rightarrow {\bf R}^n$ for some basis of $V$.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An abstract group $G$ is represented by isomorphisms on some space $X$, $\phi: G \rightarrow \hbox{Aut}(X)$. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The abstract number systems $N$, $Z$, $Q$, $R$, $C$ are represented by
+concrete numeral systems, for example the decimal and binary numeral systems.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Tao 2015)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wells, Charles 1995, &lt;strong&gt;&lt;a href=&quot;http://www.cwru.edu/artsci/math/wells/pub/pdf/commath.pdf&quot;&gt;Communicating Mathematics: Useful Ideas From Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tao, Terence 2015, &lt;strong&gt;&lt;a href=&quot;https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/&quot;&gt;275A, Notes 0: Foundations of probability theory&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Understanding Code</title>
+   <link href="http://reckbo.github.io//2015/09/27/Understanding-Code/"/>
+   <updated>2015-09-27T00:00:00+10:00</updated>
+   <id>http://reckbo.github.io//2015/09/27/Understanding-Code</id>
+   <content type="html">&lt;p&gt;Moseley and Marks (2006) claim the biggest source of software complexity
+is state.  To understand a piece of code a programmer must mentally simulate
+its execution, which requires that she consider the possible runtime states
+that influence each step.  The more possible states there are, the more
+scenarios she must consider, and the more uncertain she is of what actually
+happens.  For example, multiplication of two constant numbers is obvious but
+multiplication of two variables set and updated throughout the code is not.&lt;/p&gt;
+
+&lt;p&gt;We can look at this idea another way: by representing a programmer’s mental
+model of the code’s behaviour by a probability distribution over possible
+scenarios.  Initially she knows nothing and entropy is at a maximum, but after
+some reasoning she begins to recognize some scenarios as impossible and others
+as more or less likely.  Thus her informal reasoning about the code reduces the
+entropy of her mental model and we say she has gained information.  The cost of
+that information is mental energy: more state means more time spent
+debugging.  This doesn’t mean we should be avoiding all state, but we
+should probably be avoiding unnecessary state.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Moseley, B &amp;amp; Marks, P 2006, &lt;strong&gt;&lt;a href=&quot;http://shaffner.us/cs/papers/tarpit.pdf&quot;&gt;Out of the Tar Pit&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>An Intution for Exponentials</title>
+   <link href="http://reckbo.github.io//2015/09/20/An-Intuition-for-Exponentials/"/>
+   <updated>2015-09-20T00:00:00+10:00</updated>
+   <id>http://reckbo.github.io//2015/09/20/An-Intuition-for-Exponentials</id>
+   <content type="html">&lt;p&gt;One way to see exponentials is as numbers decomposed into “infinite roots”.
+Look at Bernoulli’s original formulation of $e$:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+
+\begin{align}
+e &amp;= \lim_{n\to \infty} (1 + \frac{1}{n})^n \\
+\end{align}
+ %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;By abusing notation and using $dx$ to mean the equation’s infitesimally small
+number, we can rewrite as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+e = (1 + dx)^{1/dx} ,
+&lt;/script&gt;
+
+&lt;p&gt;which is $e$’s decomposition into its infinite root $1+dx$, and it’s easy to see why
+the derivative of $e^x$ is $e^x$:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+
+\begin{align}
+\frac{d}{dx} e^x &amp;= \frac{e^{x + dx} - e^x}{dx} \\
+&amp;= \frac{ e^x e^{dx} - e^x}{dx} \\
+&amp;= \frac{e^x (1 + dx) - e^x}{dx} \\
+&amp;= \frac{e^x dx}{dx} \\
+&amp;= e^x
+\end{align}
+ %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Other (non-negative) numbers can be similiarly decomposed:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+
+\begin{align}
+a &amp;= e^{\ln a} \\
+    &amp;= (1 + dx)^{(\ln a)dx} \\
+    &amp;= (1 + (\ln a) dx)^{1/dx} \\
+\end{align}
+ %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;The last step follows from the substitution of $n\ln a$ for $n$ in Bernoulli’s
+formula above.  Thus, a base $a$ number grows at a rate $\ln
+a$ times $e$’s unit growth rate.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Representing Sets</title>
+   <link href="http://reckbo.github.io//2015/06/08/Representing-Sets/"/>
+   <updated>2015-06-08T00:00:00+10:00</updated>
+   <id>http://reckbo.github.io//2015/06/08/Representing-Sets</id>
+   <content type="html">&lt;p&gt;Set operations in material set theories are defined in terms
+of the membership predicate ∈, e.g.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A  \cup B := \{ x: x \in A \text{  or  } x \in B\}.&lt;/script&gt;
+
+&lt;p&gt;Typically sets are represented as lists of unique elements, e.g. {1,2,3},
+which together with the set operations define an algebra of lists.  But sets
+can also be represented as bit vectors (indicator functions) where each bit
+corresponds to an element of a universal set.  Set operations are then carried
+out by the logic operators $\land$, $\lor$, and $\lnot$.  Here is an example
+in J.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;123456789&amp;#39;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. universal set&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;intersect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. set intersection&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~.@:/:~@,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;NB. set union&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;NB. Convert set to bit vector&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;U&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;NB. Convert bit vector to set&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;1234&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;45&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;union&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;12345&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;intersect&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;12345&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;J has a nice function called &lt;em&gt;under&lt;/em&gt; that applies a transformation to its
+operands before computing the given algebraic operations, and then applies the
+transformation’s inverse to the result.  We can use it to show the equivalence
+of the two algebras.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;U&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;NB. set tobit as toset&amp;#39;s inverse &lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. set toset as tobit&amp;#39;s inverse&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;under&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;.&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;NB. Convert sets to bit vectors, OR/AND them, and convert back to sets&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;under&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;12345&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;setA&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;under&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tobit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;setB&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;NB. Convert bit vectors to sets, take union/intersection, convert back &lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;union&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;under&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;intersect&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;under&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;toset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The algebras are boolean and because of their one-to-one mapping (if all sets are
+restricted to be subsets of $U$) they are said to be isomorphic.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Random Walk on a Clock in J</title>
+   <link href="http://reckbo.github.io//2015/03/11/random-walk-on-a-clock-in-j/"/>
+   <updated>2015-03-11T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/03/11/random-walk-on-a-clock-in-j</id>
+   <content type="html">&lt;p&gt;After reading John D. Cook’s &lt;a href=&quot;http://www.johndcook.com/blog/2013/09/30/random-walk-on-a-clock/&quot;&gt;blog
+post&lt;/a&gt; on
+simulating a random walk around a clock, I wanted to see what a solution in J
+would look like.&lt;/p&gt;
+
+&lt;p&gt;Let the first row of a state matrix be a count of how many times position &lt;em&gt;j&lt;/em&gt;
+has been visited, and the second row be a row of zeroes with a one marking the
+current position.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Define a random flip function&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;flip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;_1:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+    &lt;span class=&quot;nv&quot;&gt;flip&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;_1&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;flip&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;flip&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Define a transition function that increments the position count and shifts
+the current position left or right &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;flip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{:&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. apply next 15 times&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We want to run this until all positions are visited, i.e. there are no zeroes
+in the first row.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;NB. returns true if list y has a zero&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;notallvisited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+            
+    &lt;span class=&quot;c1&quot;&gt;NB. applies function &amp;#39;next&amp;#39; until first row has no zeroes &lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;notallvisited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:{.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;_&lt;/span&gt;  
+
+    &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. run simulation 5 times&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+ &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+ &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+ &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The number of steps taken to visit all positions is the sum of the first row.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;NB. e.g compute number of steps&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;+/&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;NB. compute number of steps for 5 simulations&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;+/&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;  
+&lt;span class=&quot;mi&quot;&gt;117&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;106&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now we’re ready to run many simulations and compute the mean number of steps.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;NB. compute the mean of 20,000 simulations&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;initialState&lt;/span&gt;   
+&lt;span class=&quot;mf&quot;&gt;67.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1326&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Significant Digit (Benford's) Law in Publication Citations</title>
+   <link href="http://reckbo.github.io//2015/02/10/benfords-law-and-citations/"/>
+   <updated>2015-02-10T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/02/10/benfords-law-and-citations</id>
+   <content type="html">&lt;p&gt;I expect that any decent sized sample of a convex process will have more numbers
+with a leading significant digit of 1, followed by significant digit 2, and
+the least occurrence of numbers with significant digit 9, since&lt;/p&gt;
+
+&lt;p&gt;$f^{-1}(2) - f^{-1}(1) &amp;gt; f^{-1}(3) - f^{-1}(2) &amp;gt; … &amp;gt; f^{-1}(9) - f^{-1}(8)$&lt;/p&gt;
+
+&lt;p&gt;for a convex function $f(t)$ and uniform distribution of $t$.  To see this in
+action I thought to plot the histogram of significant digits of publication
+citations, since I think it’s reasonable that the more citations a paper has,
+the more likely it is to be cited again.  This meets the convex criterion.  For
+a roughly uniform sampling of $t$, we should collect the citations of papers
+of senior researchers (although I make one exception out of curiosity).&lt;/p&gt;
+
+&lt;p&gt;To get the data, I used the &lt;a href=&quot;http://www.harzing.com/pop.htm&quot;&gt;Publish or Perish&lt;/a&gt;
+application, a Windows interface to Google Scholar, and downloaded six
+csv files, one per researcher.  Here’s the J code I use to plot the histograms:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;csv plot&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;csvs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fdir&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. helper functions&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;readcitescol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;@:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;quot;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:}.@:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;readcsv&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;firstdigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{.@:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;#.^:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:#/.~&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;dropzero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:}.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;normalize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Make histogram for each csv&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dropzero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;normalize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;firstdigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;readcitescol&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;csvs&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Define Benford distribution function&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;benford&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;^.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Make the plot&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;key Benford,&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;joinstring&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;csvs&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. the legend&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;xlabel &amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;quot;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. labels 1 to 9&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;title Benford Distribution for Publication Citations&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;joinstring&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;plot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;benford&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hist&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_J.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And a version made using R’s ggplot:
+&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/citations-and-benfords-law/master/benford_citations_R.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/reckbo/citations-and-benfords-law/&quot;&gt;Code on Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So the results match intuition, but the next question is why (except for
+the less senior researcher) do the distributions so closely match
+the log distribution $log(1 + 1/x)$?  Here’s one answer by &lt;a href=&quot;https://projecteuclid.org/euclid.ss/1177009869&quot;&gt;Hill 1995&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hill, Theodore 1995,  &lt;strong&gt;&lt;a href=&quot;https://projecteuclid.org/euclid.ss/1177009869&quot;&gt;A Statistical Derivation of the Significant-Digit Law&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Information Theory, Inference, and Learning Algorithms in J - Ensembles</title>
+   <link href="http://reckbo.github.io//2015/02/02/mackay03-in-j-ensembles/"/>
+   <updated>2015-02-02T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/02/02/mackay03-in-j-ensembles</id>
+   <content type="html">&lt;p&gt;Unlike in the &lt;a href=&quot;/2015/01/28/mackay03-in-j-bigrams/&quot;&gt;previous post&lt;/a&gt; on 27x27
+letter bigrams where we made a joint probability matrix by counting, ensembles
+are usually defined by a set of conditional and marginal probabilities.  To get
+an intuition for this, let’s write out the simple example given in Example 2.3
+(p. 25) in J.  But first, here is the definition for an ensemble.&lt;/p&gt;
+
+&lt;p&gt;An &lt;strong&gt;ensemble X&lt;/strong&gt; is a triple $(x,A_x,P_x)$ where &lt;em&gt;x&lt;/em&gt; is an outcome taking on
+values from $A_x = \{a_1, …, a_I\}$, with associated probabilities
+$P_x = \{p_1, …, p_I\}$&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;joint ensemble XY&lt;/strong&gt; is an ensemble where each outcome is an order pair
+&lt;em&gt;(x,y)&lt;/em&gt; (also written &lt;em&gt;xy&lt;/em&gt;), where $x \in A_x = \{a_1,…,a_I\}$, $y \in A_y = \{b_1,…,b_J\}$, 
+and $P(x,y)$ is called the joint probability of &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/mackay/itila/&quot;&gt;(Mackay 03)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now for the example:&lt;/p&gt;
+
+&lt;p&gt;Jo wakes up not feeling well and the doctor orders a test for a
+disease.  The test is 95% reliable, and 1% of Jo’s age and background
+have the disease.  If the test is positive, what is the probability
+Jo has the disease?&lt;/p&gt;
+
+&lt;p&gt;If we define variables &lt;em&gt;disease&lt;/em&gt; and &lt;em&gt;test&lt;/em&gt; as&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;disease=0&lt;/em&gt; =&amp;gt; Jo doesn’t have the disease&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;disease=1&lt;/em&gt; =&amp;gt; Jo has the disease&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;test=0&lt;/em&gt; =&amp;gt; the test is negative for the disease&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;test=1&lt;/em&gt; =&amp;gt; the test is positive for the disease&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;then the probabilities given are&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$P(test=0 | disease=0) = 5\%$&lt;/li&gt;
+  &lt;li&gt;$P(test=1 | disease=1) = 95\%$&lt;/li&gt;
+  &lt;li&gt;$P(disease=0) = 99\%$&lt;/li&gt;
+  &lt;li&gt;$P(disease=1) = 1\%$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To start, we represent $P(test=j|disease=i) = P_{i,j}$ as a matrix
+&lt;code&gt;ptest_disease&lt;/code&gt;  where rows represent &lt;em&gt;disease&lt;/em&gt;  and columns represent
+&lt;em&gt;test&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. Conditional probability P(test|disease)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ptest_disease&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and the marginal probability  $P(disease=i)$  as a vector&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;NB. Marginal probability P(disease)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pdisease&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt; 
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then we can compute the joint probability by multiplying the two,
+since $P(test,disease) = P(test|disease) P(disease)$&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;NB. joint P(test,disease)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;joint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ptest_disease&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pdisease&lt;/span&gt; 
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9405&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0495&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0005&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0095&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that we have the joint probability, we can calculate any probability that
+we are interested in.  To answer the original question, what is
+$P(disease=1|test=1)$, we divide each column of &lt;code&gt;joint&lt;/code&gt; by it’s sum, since
+$P(disease|test) =  \frac{P(disease,test)}{P(disease)}$&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;NB. P(disease|test)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pdisease_test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;joint&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;999469&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;838983&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00053135&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;161017&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and we see that  $P(disease=1|test=1)$  is 16%.  So even though the test is
+95% accurate, because it’s a rare disease it’s more likely the test is
+giving a false positive than Jo has the disease.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MacKay, David 2003, &lt;strong&gt;&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/itprnn/book.pdf&quot;&gt;Information Theory, Inference, and Learning Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Information Theory, Inference, and Learning Algorithms in J - Bigrams</title>
+   <link href="http://reckbo.github.io//2015/01/28/mackay03-in-j-bigrams/"/>
+   <updated>2015-01-28T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/01/28/mackay03-in-j-bigrams</id>
+   <content type="html">&lt;p&gt;Here’s a &lt;a href=&quot;https://github.com/reckbo/Mackay03&quot;&gt;J implementation&lt;/a&gt; to reproduce
+the probability distributions of the bigrams in the Linux FAQ, as shown in
+section 2.1 of 
+&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/mackay/itila/&quot;&gt;Information Theory, Inference, and Learning Algorithms (Mackay 2003)&lt;/a&gt;,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;NB. Roger Hui&amp;#39;s functions for inverted tables&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. http://www.jsoftware.com/jwiki/Essays/Inverted%20Table&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;invertedt.ijs&amp;#39;&lt;/span&gt;  
+
+&lt;span class=&quot;c1&quot;&gt;NB. Read in text file, make it lower case&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;faq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tolower&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freads&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;linuxfaq.txt&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Define the outcomes we want to count - 27x27 possible bigrams made from&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. english letters and a space&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;alphabet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{~&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;bigrams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;alphabet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Count all the bigrams and sort&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;tbigramsall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tsort&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#/.~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]\&lt;/span&gt;  &lt;span class=&quot;nv&quot;&gt;faq&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Get the counts for only the outcomes we&amp;#39;re interested in&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;tcounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;**&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tadd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tbigramsall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tfrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tbigramsall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tindexof&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bigrams&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. compute 27x27 probability matrix&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;probarray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tcounts&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB. 729 array&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_27&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]\&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;probarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;NB.  27x27 matrix&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Conditional probabilities&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;pyx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;prob&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;pxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;.|:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;prob&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Plot the results&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. make squares proportional in size to each value in matrix y&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. credit to Raul Miller http://jsoftware.com/pipermail/programming/2015-January/040848.html&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;./~|&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;mat2sq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;$:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;,/ 0 |: ,/ 0 2|: y &amp;gt;:/ (square % x)&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;viewmat&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;viewmat&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mat2sq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;prob&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;viewmat&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mat2sq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pyx&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;viewmat&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mat2sq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pxy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Joint distribution&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_prob.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P(y&lt;/td&gt;
+      &lt;td&gt;x)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_pyx.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P(x&lt;/td&gt;
+      &lt;td&gt;y)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/Mackay03/master/bigrams_pxy.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MacKay, David 2003, &lt;strong&gt;&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/itprnn/book.pdf&quot;&gt;Information Theory, Inference, and Learning Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Information Theory, Inference, and Learning Algorithms in J - Repetition Code</title>
+   <link href="http://reckbo.github.io//2015/01/22/mackay03-in-j-repetition-code/"/>
+   <updated>2015-01-22T00:00:00+11:00</updated>
+   <id>http://reckbo.github.io//2015/01/22/mackay03-in-j-repetition-code</id>
+   <content type="html">&lt;p&gt;Here’s a &lt;a href=&quot;https://github.com/reckbo/Mackay03&quot;&gt;J implementation&lt;/a&gt; of the
+repetition code in section 1.2 of 
+&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/mackay/itila/&quot;&gt;Information Theory, Inference, and Learning Algorithms (Mackay 2003)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-j&quot; data-lang=&quot;j&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;jpeg viewmat&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. binarize an image&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;binarize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;./^:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;NB. binary matrix with shape of y and probability of 1 = x, default 0.10&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;noise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;$:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.@:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&amp;amp;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:$@:]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. a bit is flipped if the corresponding noise vector bit is 1, which is&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. equivalent to add mod 2, or XOR &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;addnoise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~:&lt;/span&gt;  
+
+&lt;span class=&quot;c1&quot;&gt;NB. repetition code - makes x copies of image y (default 3)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;$:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,:@]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+
+&lt;span class=&quot;c1&quot;&gt;NB. majority vote decoder - returns 0 or 1.  For 3 bits, the function table is:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. (; vote)&amp;quot;1 #: i.8&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;vote&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:+/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+/@:-.&lt;/span&gt;  
+
+&lt;span class=&quot;c1&quot;&gt;NB. define the encoder as the repetition code and the majority vote as it&amp;#39;s&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;NB. inverse&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;enc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:.&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vote&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@:]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. verb to simulate a transmission of image y with repetition x&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;transmit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dyad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;(addnoise noise)&amp;amp;.(x&amp;amp;enc) y&amp;#39;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;_&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;NB. Compare results of transmitting an image with repetition codes 1 thru 6&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;readjpeg&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;cat.jpg&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;transmit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;binarize&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;img&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;viewmat&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And the result, starting with no encoding, ending with a repetition code of 6:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/reckbo/Mackay03/master/cat_decoded.png&quot; height=&quot;600&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;References&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MacKay, David 2003, &lt;strong&gt;&lt;a href=&quot;http://www.inference.phy.cam.ac.uk/itprnn/book.pdf&quot;&gt;Information Theory, Inference, and Learning Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
 
 </feed>

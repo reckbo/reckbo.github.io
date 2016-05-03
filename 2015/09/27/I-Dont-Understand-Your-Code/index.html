@@ -12,7 +12,7 @@
   <meta name="author" content="">
   <title>
     
-      reckbo &middot; Blog
+      I Don't Understand Your Code &middot; reckbo
     
   </title>
 
@@ -25,7 +25,6 @@
   <link href='https://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/public/css/bootstrap.min.css">
   <link rel="stylesheet" href="/public/css/blog.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -43,15 +42,14 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 
-<script>
+  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-73199709-1', 'auto');
+  ga('create', 'UA-18390890-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </head>
 
@@ -92,151 +90,111 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
           <div class="row">
               <div class="col-sm-8 blog-main">
     <div class="blog-post">
-        <h2 class="blog-post-title">Home</h2>
-        <p class="blog-post-meta"></p>
-        <div class="related">
-  <h4>Recent Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+        <h2 class="blog-post-title">I Don't Understand Your Code</h2>
+        <p class="blog-post-meta">27 Sep 2015</p>
+        <p>Moseley and Marks (2006) claim the biggest source of software complexity
+is state.  To understand a piece of code a programmer must mentally simulate
+its execution, which requires that she consider the possible runtime states
+that influence each step.  The more possible states there are, the more
+scenarios she must consider, and the more uncertain she is of what actually
+happens.  For example, multiplication of two constant numbers is obvious but
+multiplication of two variables set and updated throughout the code is not.</p>
 
-  <p></p>
+<p>We can look at this idea another way: by representing a programmer’s mental
+model of the code’s behaviour by a probability distribution over possible
+scenarios.  Initially she knows nothing and entropy is at a maximum, but after
+some reasoning she begins to recognize some scenarios as impossible and others
+as more or less likely.  Thus her informal reasoning about the code reduces the
+entropy of her mental model and we say she has gained information.  The cost of
+that information is mental energy (analagous to how lowering a physical
+system’s entropy costs heat energy); more state means more time spent
+debugging.  This doesn’t mean we should be avoiding <em>all</em> state, but it does
+mean we should be avoiding <em>unnecessary</em> state.</p>
 
-  <h4>All Posts</h4>
-  <ul class="related-posts">
-     
-      <li>
-          <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
-            HTML Scraping with a Text Browser
-            <small>
-                19 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
-            A Computer Science Perspective Helps
-            <small>
-                11 Oct 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
-            <small>
-                27 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/09/20/An-Intuition-for-Exponentials/">
-            An Intution for Exponentials
-            <small>
-                20 Sep 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/06/08/Representing-Sets/">
-            Representing Sets
-            <small>
-                08 Jun 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/03/11/random-walk-on-a-clock-in-j/">
-            Random Walk on a Clock in J
-            <small>
-                11 Mar 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/10/benfords-law-and-citations/">
-            Significant Digit (Benford's) Law in Publication Citations
-            <small>
-                10 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/02/02/mackay03-in-j-ensembles/">
-            Information Theory, Inference, and Learning Algorithms in J - Ensembles
-            <small>
-                02 Feb 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/28/mackay03-in-j-bigrams/">
-            Information Theory, Inference, and Learning Algorithms in J - Bigrams
-            <small>
-                28 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-      <li>
-          <a href="/2015/01/22/mackay03-in-j-repetition-code/">
-            Information Theory, Inference, and Learning Algorithms in J - Repetition Code
-            <small>
-                22 Jan 2015
-            </small>
-          </a>
-      </li>
-    
-  </ul>
+<p><i><b>References</b></i></p>
 
-</div>
+<ul>
+  <li>Moseley, B &amp; Marks, P 2006, ‘Out of the Tar Pit’. [<a href="http://shaffner.us/cs/papers/tarpit.pdf">pdf</a>]</li>
+</ul>
 
+        </div>
 
+    <div class="related">
+        <h4>Related Posts</h4>
+        <ul class="related-posts">
+            
+            <li>
+            <a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">
+                HTML Scraping with a Text Browser
+                <small>19 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">
+                A Computer Science Perspective Helps
+                <small>11 Oct 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/09/20/An-Intuition-for-Exponentials/">
+                An Intution for Exponentials
+                <small>20 Sep 2015</small>
+            </a>
+            </li>
+            
+            <li>
+            <a href="/2015/06/08/Representing-Sets/">
+                Representing Sets
+                <small>08 Jun 2015</small>
+            </a>
+            </li>
+            
+        </ul>
 
+        <p></p>
+
+        <!--<h3>Recent Posts</h3>-->
+        <!--<ul class="related-posts">-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/19/HTML-Scraping-with-a-Text-Browser/">-->
+                <!--HTML Scraping with a Text Browser-->
+                <!--<small>-->
+                    <!--19 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/10/11/A-Computer-Science-Perspective-Helps/">-->
+                <!--A Computer Science Perspective Helps-->
+                <!--<small>-->
+                    <!--11 Oct 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/27/I-Dont-Understand-Your-Code/">-->
+                <!--I Don't Understand Your Code-->
+                <!--<small>-->
+                    <!--27 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li>-->
+            <!--<a href="/2015/09/20/An-Intuition-for-Exponentials/">-->
+                <!--An Intution for Exponentials-->
+                <!--<small>-->
+                    <!--20 Sep 2015-->
+                <!--</small>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!---->
+        <!--</ul>-->
     </div>
 </div>
 
@@ -254,7 +212,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
       <!---->
           <!--<a class="sidebar-nav-item" href="/2015/10/11/A-Computer-Science-Perspective-Helps/">A Computer Science Perspective Helps</a>-->
       <!---->
-          <!--<a class="sidebar-nav-item" href="/2015/09/27/Understanding-Code/">Understanding Code</a>-->
+          <!--<a class="sidebar-nav-item" href="/2015/09/27/I-Dont-Understand-Your-Code/">I Don't Understand Your Code</a>-->
       <!---->
           <!--<a class="sidebar-nav-item" href="/2015/09/20/An-Intuition-for-Exponentials/">An Intution for Exponentials</a>-->
       <!---->
@@ -270,12 +228,9 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
     <div class="sidebar-module sidebar-module-inset">
         <h4>About</h4>
-        <p> I'm a software developer currently living in Melbourne, working remotely for the
-            <a href="http://pnl.bwh.harvard.edu">Psychiatry Neuroimaging Laboratory</a>
-             in Boston and
-            a startup in Canada.  My interests are data analysis pipelines and inference,
-            and I'm unduly obsessed with understanding design principles behind concise,
-            uncomplicated software systems.
+        <p> I'm a software engineer living in Melbourne, working remotely for the 
+        <a href="http://pnl.bwh.harvard.edu">Psychiatry Neuroimaging Laboratory</a>
+        in Boston as well as a startup in Canada.
         </p>
     </div>
 
@@ -302,8 +257,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         </li>
         
         <li class="sidebar-recent-posts">
-        <a href="/2015/09/27/Understanding-Code/">
-            Understanding Code
+        <a href="/2015/09/27/I-Dont-Understand-Your-Code/">
+            I Don't Understand Your Code
             <small>
                 27 Sep 2015
             </small>
