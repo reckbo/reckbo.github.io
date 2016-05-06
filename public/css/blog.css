@@ -192,6 +192,15 @@ img {
     font-style: italic;
 }
 
+pre {
+    border: 0px;
+}
+
+code {
+    color: #19177C;
+    font-size: 80%;
+}
+
 /*
  * Footer
  */
@@ -208,3 +217,4 @@ img {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
