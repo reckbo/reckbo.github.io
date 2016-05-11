@@ -14,6 +14,7 @@ _**Computer Science**_
 * **Category Theory for Computer Scientists**   <br>Barr, M & Wells, C 1998
 * **[J for C Programmers](http://codejsoftwarecom/mediawiki/images/8/80/JforC20071003pdf)**   <br>Rich, Henry 2007
 * **[How Non-Member Functions Improve Encapsulation](http://www.drdobbscom/cpp/how-non-member-functions-improve-encapsu/184401197)**   <br>Meyers, Scott 2000
+* **[Singletons are Pathological Liars](http://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/)**   <br>Hevery Miško 2008
 
 _**Math**_
 

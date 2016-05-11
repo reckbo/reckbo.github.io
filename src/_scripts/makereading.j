@@ -12,6 +12,6 @@ title: Reading
 ---
 )
 
-Body=.LF joinstring ;  ( (a:,2&{.)@{. , <@formatline"1@:}.) each  t=.(<@:(deb each)@:('|'&cut every)@:cutLF;.1~ '_**'&E.) fread'reading.dsv'
-(HDR,Body) fwrite '_reading.md'
+Body=.LF joinstring ;  ( (a:,2&{.)@{. , <@formatline"1@:}.) each  t=.(<@:(deb each)@:('|'&cut every)@:cutLF;.1~ '_**'&E.) fread'_reading.dsv'
+(HDR,Body) fwrite 'reading.md'
 exit''
